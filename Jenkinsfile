@@ -11,7 +11,7 @@ pipeline {
                 sh 'docker tag ppython_app localhost:443/ppython_app:new_v1'
                 sh 'docker push localhost:443/ppython_app:new_v1'
 
-                sh 'docker tag ngx localhost:443/nginx:1.17'
+                sh 'docker tag nginx localhost:443/nginx:1.17'
                 sh 'docker push localhost:443/nginx:1.17'
             }
         }
