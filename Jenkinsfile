@@ -25,7 +25,7 @@ pipeline {
                 sh 'docker pull localhost:443/ppython_app:new_v1'
                 sh 'docker pull localhost:443/nginx:1.17'
                 sh 'docker run -d --name ngx localhost:443/nginx:1.17'
-                sh 'docker run -d --name django localhost:443/ppython_app:new_v1'
+                sh 'docker run -d --name django-test2 localhost:443/ppython_app:new_v1'
             }
         }
     }
