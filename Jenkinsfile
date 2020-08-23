@@ -20,8 +20,8 @@ pipeline {
                 agent {label 'master'}
             }
             steps {
-                docker pull 192.168.1.4:443/django:new_v1
-                docker pull 192.168.1.4:443/ngx:new_v1
+                'sh docker pull 192.168.1.4:443/django:new_v1'
+                'sh docker pull 192.168.1.4:443/ngx:new_v1'
                 'sh docker run -d ngx:new_v1'
                 'sh docker run -d django:new_v1'
             }
