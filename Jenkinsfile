@@ -13,7 +13,7 @@ pipeline {
                 sh 'docker rm -f django-gunicorn'
 
                 sh 'docker tag nginx localhost:443/nginx:1.17'
-                sh 'docker push localhost:443/'
+                sh 'docker push localhost:443/nginx:1.17'
                 sh 'docker rm -f ngx'
             }
         }
