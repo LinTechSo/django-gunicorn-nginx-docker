@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Prod'){
             agent{
-                abel 'master'
+                label 'master'
             }
             steps {
                 sh 'docker pull 192.168.1.4:443/django:new_v1'
