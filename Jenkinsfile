@@ -6,7 +6,7 @@ pipeline {
                 agent { label 'parham'}
             }
             steps {
-                'sh docker-compose up --build'
+                'sh docker-compose up -d --build'
 
                 'sh docker tag django-gunicorn localhost:443/django:new_v1'
                 'sh docker push localhost:443/django:new_v1'
