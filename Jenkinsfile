@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Prod'){
             agent{
-                label 'master'
+                label 'parham'
             }
             steps {
                 sh 'docker pull localhost:443/ppython_app:new_v1'
