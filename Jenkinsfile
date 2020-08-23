@@ -3,10 +3,10 @@ pipeline {
     stages {
         stage('Build'){
             agent {
-                agent { label 'parham'}
+                label 'parham'
             }
             steps {
-                'sh docker-compose up -d --build'
+                sh 'docker-compose up -d --build'
 
                 sh 'docker tag django-gunicorn localhost:443/django:new_v1'
                 sh 'docker push localhost:443/django:new_v1'
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Prod'){
             agent{
-                agent {label 'master'}
+                abel 'master'
             }
             steps {
                 sh 'docker pull 192.168.1.4:443/django:new_v1'
