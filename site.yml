@@ -22,3 +22,6 @@
         state: present
         files:
           - "docker-compose.yml"
+    
+    - name: exec docker and fix permissions
+      command: docker exec -it ngx chown -R nginx:nginx /src/blog/static/
